@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ピピっとセルフアプリ ダウンロード</title>
+  <script>
+    window.onload = function() {
+      const ua = navigator.userAgent;
+
+      if (/iPhone|iPad|iPod/.test(ua)) {
+        // iOS デバイスの場合
+        window.location.href = "https://apps.apple.com/jp/app/ピピットセルフ/id1545897131";
+      } else if (/Android/.test(ua)) {
+        // Android デバイスの場合
+        window.location.href = "https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear";
+      } else {
+        // その他の端末（PCなど）は案内ページを表示
+        document.getElementById("info").style.display = "block";
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="info" style="display: none; text-align: center; padding-top: 50px;">
+    <h2>ご利用のデバイスに対応するアプリストアへ自動的に転送します。</h2>
+    <p>もし自動で移動しない場合は、以下のリンクをクリックしてください：</p>
+    <p><a href="https://apps.apple.com/jp/app/ピピットセルフ/id1545897131">iOS版はこちら</a></p>
+    <p><a href="https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear">Android版はこちら</a></p>
+  </div>
+</body>
+</html>
