@@ -12,15 +12,10 @@
   <meta charset="UTF-8">
   <title>ピピっとセルフアプリ ダウンロード</title>
   <script>
-    window.onload = function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const ua = navigator.userAgent;
 
       setTimeout(() => {
-        // GAの page_view を明示的に送信
-        gtag('event', 'page_view', {
-          send_to: 'G-MFXW3543JY'
-        });
-
         if (/iPhone|iPad|iPod/.test(ua)) {
           window.location.href = "https://apps.apple.com/jp/app/ピピットセルフ/id1545897131";
         } else if (/Android/.test(ua)) {
@@ -29,7 +24,7 @@
           document.getElementById("info").style.display = "block";
         }
       }, 2000); // 2秒遅延
-    };
+    });
   </script>
 </head>
 <body>
