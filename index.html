@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFXW3543JY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,16 +15,18 @@
     window.onload = function() {
       const ua = navigator.userAgent;
 
-      if (/iPhone|iPad|iPod/.test(ua)) {
-        // iOS デバイスの場合
-        window.location.href = "https://apps.apple.com/jp/app/ピピットセルフ/id1545897131";
-      } else if (/Android/.test(ua)) {
-        // Android デバイスの場合
-        window.location.href = "https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear";
-      } else {
-        // その他の端末（PCなど）は案内ページを表示
-        document.getElementById("info").style.display = "block";
-      }
+      setTimeout(() => {
+        if (/iPhone|iPad|iPod/.test(ua)) {
+          // iOS デバイスの場合
+          window.location.href = "https://apps.apple.com/jp/app/ピピットセルフ/id1545897131";
+        } else if (/Android/.test(ua)) {
+          // Android デバイスの場合
+          window.location.href = "https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear";
+        } else {
+          // その他の端末（PCなど）は案内ページを表示
+          document.getElementById("info").style.display = "block";
+        }
+      }, 1000); // 1秒遅延
     };
   </script>
 </head>
