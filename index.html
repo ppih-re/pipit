@@ -12,27 +12,25 @@
   <meta charset="UTF-8">
   <title>ピピっとセルフアプリ ダウンロード</title>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    window.onload = function() {
       const ua = navigator.userAgent;
 
-      setTimeout(() => {
-        if (/iPhone|iPad|iPod/.test(ua)) {
-          window.location.href = "https://apps.apple.com/jp/app/ピピットセルフ/id1545897131";
-        } else if (/Android/.test(ua)) {
-          window.location.href = "https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear";
-        } else {
-          document.getElementById("info").style.display = "block";
-        }
-      }, 2000); // 2秒遅延
-    });
+      if (/iPhone|iPad|iPod/.test(ua)) {
+        window.location.href = "ios_landing.html";
+      } else if (/Android/.test(ua)) {
+        window.location.href = "android_landing.html";
+      } else {
+        document.getElementById("info").style.display = "block";
+      }
+    };
   </script>
 </head>
 <body>
   <div id="info" style="display: none; text-align: center; padding-top: 50px;">
     <h2>ご利用のデバイスに対応するアプリストアへ自動的に転送します。</h2>
     <p>もし自動で移動しない場合は、以下のリンクをクリックしてください：</p>
-    <p><a href="https://apps.apple.com/jp/app/ピピットセルフ/id1545897131">iOS版はこちら</a></p>
-    <p><a href="https://play.google.com/store/apps/details?id=jp.co.toshibatec.ss.ngp.retailgear">Android版はこちら</a></p>
+    <p><a href="ios_landing.html">iOS版はこちら</a></p>
+    <p><a href="android_landing.html">Android版はこちら</a></p>
   </div>
 </body>
 </html>
